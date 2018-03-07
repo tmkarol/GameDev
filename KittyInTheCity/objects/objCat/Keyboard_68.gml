@@ -1,2 +1,2 @@
 direct = "right";
-xVelocity = 10;
+xVelocity = 40;
