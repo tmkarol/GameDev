@@ -723,6 +723,25 @@
             }
         },
         {
+            "Key": "4fe0b23d-1e4b-4005-9887-87d00a21c35a",
+            "Value": {
+                "id": "8616b067-7bb9-4481-911f-67e2e4f203b6",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/objManHole\/objManHole.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "50ab1986-376e-4f71-b38c-e836f25bd6aa",
             "Value": {
                 "id": "a7fd4345-3a72-4537-b34b-a9be173e33d4",
@@ -1081,6 +1100,25 @@
                 ],
                 "resourcePath": "views\/707ac802-f74e-48ef-9502-10ef49fe380a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "71dcff31-8337-4166-9bdd-65b391aefc5e",
+            "Value": {
+                "id": "e546f4ea-75e1-4ebd-a2bc-ebc9849c9ba4",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sprManHole\/sprManHole.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
