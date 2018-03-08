@@ -8,3 +8,5 @@ direct = "right"
 jumping = false;
 
 grav = 5;
+
+underground = false; //used for forest level 
