@@ -2,7 +2,7 @@
     "id": "8cd82c31-6fb2-41ba-8556-3191c552c6b4",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "objLvl1UnderFloor",
+    "name": "objLvl1Floor",
     "eventList": [
         
     ],
@@ -23,7 +23,7 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": null,
-    "solid": true,
+    "solid": false,
     "spriteId": "b0f23aa2-e8f5-49ef-bc1d-5a5e248dc1bf",
     "visible": true
 }

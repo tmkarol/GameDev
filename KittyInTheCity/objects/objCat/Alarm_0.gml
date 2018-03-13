@@ -1,0 +1,1 @@
+doubleClick = 0;

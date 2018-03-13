@@ -1,8 +1,8 @@
 {
-    "id": "f7a72d73-b5e7-466e-88a3-c732dc7f5d46",
+    "id": "bf61909d-f11a-4cec-a9b8-e3eb35849c13",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "objLvl1TopFloor",
+    "name": "objPlatformParent",
     "eventList": [
         
     ],
@@ -23,7 +23,7 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": null,
-    "solid": true,
-    "spriteId": "da4a32a0-cfd1-432f-92ea-fdf2c671443c",
+    "solid": false,
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
 }
