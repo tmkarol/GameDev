@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "01c65e8a-39b2-4eaf-824f-17e8d5b6be57",
+            "Value": {
+                "id": "18cdf5db-ebf1-477b-b0ac-bae0a797936d",
+                "resourcePath": "sprites\\sprHealthBar\\sprHealthBar.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "043f4dba-3adb-4398-9759-8680ba1044ab",
             "Value": {
                 "id": "97e1d068-c7e4-44b4-a7ab-07d66d151bc9",
@@ -332,6 +340,14 @@
                 "id": "a9bf1b72-22aa-41fe-82ae-1f09b03b767d",
                 "resourcePath": "objects\/objAnimalControl\/objAnimalControl.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4a0f006f-c23c-492d-ab0c-63c1040ef3e2",
+            "Value": {
+                "id": "8c5e060b-ac2e-49cc-a992-d8c4af2b7f29",
+                "resourcePath": "sprites\\sprite56\\sprite56.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
