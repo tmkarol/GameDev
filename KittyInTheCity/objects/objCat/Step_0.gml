@@ -1,3 +1,4 @@
+if (global.pause) { exit; }
 
 // update x position
 x = x + xVelocity;
