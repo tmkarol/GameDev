@@ -894,6 +894,25 @@
             }
         },
         {
+            "Key": "56cc3b1b-2ebe-4bab-b519-e0af0d58b652",
+            "Value": {
+                "id": "0ae065de-7dd0-4c29-a0fb-ea707ca1c54f",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sprLvl4UndergroundBackround\/sprLvl4UndergroundBackround.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5788b85f-4586-4e86-8222-9e45754a0bea",
             "Value": {
                 "id": "4d83f099-7eb5-4e8f-996a-5b22e1431298",
@@ -1882,25 +1901,6 @@
             }
         },
         {
-            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
-            "Value": {
-                "id": "9e487cdc-6f33-460f-9fa9-7da56fed1621",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "options\/linux\/options_linux.yy",
-                "resourceType": "GMLinuxOptions"
-            }
-        },
-        {
             "Key": "abf80695-2342-4aac-b701-d3511b66c6fe",
             "Value": {
                 "id": "64cb10a5-845a-4d60-b7eb-655137284518",
@@ -2240,25 +2240,6 @@
                 ],
                 "resourcePath": "fonts\/fntPause\/fntPause.yy",
                 "resourceType": "GMFont"
-            }
-        },
-        {
-            "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
-            "Value": {
-                "id": "1d0e424c-f99d-4461-8955-458c7ab66302",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "options\/windows\/options_windows.yy",
-                "resourceType": "GMWindowsOptions"
             }
         },
         {
