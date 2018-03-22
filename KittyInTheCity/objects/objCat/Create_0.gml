@@ -1,20 +1,19 @@
 image_speed = 0;
 image_index = 0;
 
-direct = "right"
-
 grav = 5;
 
 xVelocity = 0;
 yVelocity = 0;
 
 running = false;
+jumping = false;
+ducking = false;
+
 walkVelocity = 10;
 runVelocity = 20;
-doubleClick = 0;
-
-jumping = false;
 jumpVelocity = -40;
+doubleClick = 0;
 
 level = asset_get_index(room_get_name(room));
 if (level == 10) {
@@ -23,10 +22,7 @@ if (level == 10) {
 else {
 	minBase = 704;
 }
-y = minBase;
 base = y;
-
-ducking = false;
 
 onPlatform = false;
 

@@ -56,19 +56,7 @@ if (!place_meeting(x, y + 1, objFloorParent)) {
 		base = lastBase;
 }*/
 
-// jumping and onPlatform testing
-if (jumping) {
-	image_index = 1;
-}
-else if (onPlatform) {
-	image_index = 2;
-}
-else {
-	image_index = 0;
-}
-
 // Sprite changes 
-
 if (ducking) sprite_index = sprCatDuck;
 else if (jumping) sprite_index = sprCatJump;
 else {
