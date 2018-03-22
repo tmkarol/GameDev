@@ -26,7 +26,9 @@ else {
 y = minBase;
 base = y;
 
+ducking = false;
+
 onPlatform = false;
 
 hearts = 9;
-stamina = 100; 
+stamina = 100;

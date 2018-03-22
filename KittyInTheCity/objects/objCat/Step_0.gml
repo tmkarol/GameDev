@@ -66,3 +66,28 @@ else if (onPlatform) {
 else {
 	image_index = 0;
 }
+
+// Sprite changes 
+
+if (ducking) sprite_index = sprCatDuck;
+else if (jumping) sprite_index = sprCatJump;
+else {
+	if (xVelocity == 0) {
+			sprite_index = sprCatStandd;
+		}
+	else if (running) {
+		if (sprite_index != sprCatRun) {
+				sprite_index = sprCatRun;
+			}
+		}
+	else {
+		if (sprite_index != sprCatWalk) {
+				sprite_index = sprCatWalk;
+			}
+		}
+}
+if (x < xprevious) image_xscale = -1;
+if (x > xprevious) image_xscale = 1;
+
+
+
