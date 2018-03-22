@@ -16,12 +16,17 @@ doubleClick = 0;
 jumping = false;
 jumpVelocity = -40;
 
-lastBase = y;
+level = asset_get_index(room_get_name(room));
+if (level == 10) {
+	minBase = 5436;
+}
+else {
+	minBase = 704;
+}
+y = minBase;
 base = y;
 
 onPlatform = false;
 
 hearts = 9;
-stamina = 100;
-
-underground = false; 
+stamina = 100; 

@@ -29,7 +29,7 @@ if (!onPlatform) {
 		// under platform
 		else {
 			yVelocity = 0;
-			if (!(instanceID.y + 126 > lastBase)) {
+			if (!(instanceID.y + 126 > minBase)) {
 				y = instanceID.y + 126;
 			}
 		}
@@ -46,7 +46,7 @@ else {
 	if (!place_meeting(x, y + 1, objPlatformParent)) {
 		onPlatform = false;
 		jumping = true;
-		base = lastBase;
+		base = minBase;
 	}
 }
 /*

@@ -1,6 +1,6 @@
 if (!jumping) {
 	onPlatform = false;
 	jumping = true;
-	base = lastBase;
+	base = minBase;
 	yVelocity = jumpVelocity;
 }
