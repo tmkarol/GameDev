@@ -6,6 +6,7 @@ grav = 5;
 xVelocity = 0;
 yVelocity = 0;
 
+walking = false;
 running = false;
 jumping = false;
 ducking = false;
@@ -27,4 +28,5 @@ base = y;
 onPlatform = false;
 
 hearts = 9;
-stamina = 100;
+maxStamina = 100;
+stamina = maxStamina;
