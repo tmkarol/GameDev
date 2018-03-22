@@ -1,2 +1,2 @@
 // enemy boss
-path_start(pathAC, 40, path_action_stop, false);
+path_start(pathAC, 10, path_action_stop, false);
