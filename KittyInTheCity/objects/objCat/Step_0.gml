@@ -16,29 +16,45 @@ if (jumping) {
 
 // collision with platform
 if (!onPlatform) {
-	if (place_meeting(x, y + yVelocity, objPlatformParent)) {
+	instanceID = instance_place(x, y + yVelocity, objPlatformParent);
+	if (instanceID != noone) {
 		// above platform
-		if (y <= objPlatformParent.y) {
+		if (y <= instanceID.y) {
 			onPlatform = true;
 			jumping = false;
 			yVelocity = 0;
-			y = objPlatformParent.y;
+			y = instanceID.y;
 			base = y;
 		}
 		// under platform
 		else {
 			yVelocity = 0;
-			y = objPlatformParent.y + 126;
+			if (!(instanceID.y + 126 > lastBase)) {
+				y = instanceID.y + 126;
+			}
+		}
+	}
+	if (place_meeting(x + xVelocity, y, objPlatformParent)) {
+		if (!onPlatform) {
+			x -= xVelocity;
+			xVelocity = 0;
 		}
 	}
 }
 else {
+	// drop from platform
 	if (!place_meeting(x, y + 1, objPlatformParent)) {
 		onPlatform = false;
 		jumping = true;
-		base = minBase;
+		base = lastBase;
 	}
 }
+/*
+// drop from floor
+if (!place_meeting(x, y + 1, objFloorParent)) {
+		jumping = true;
+		base = lastBase;
+}*/
 
 // jumping and onPlatform testing
 if (jumping) {

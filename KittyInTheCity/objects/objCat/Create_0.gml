@@ -16,9 +16,13 @@ doubleClick = 0;
 jumping = false;
 jumpVelocity = -40;
 
+
 ducking = false;
 
 minBase = y;
+
+lastBase = y;
+
 base = y;
 
 onPlatform = false;
