@@ -16,5 +16,5 @@ else if(room == Forest){
 	DrawFloor(objLvl4TopFloor, 64, (768/2), 10000, 8778);
 }
 else if (room == FireEscape){
-	DrawFloor(objLvl5Floor, 64, 5500, 15000, 0);
+	DrawFloor(objLvl2TopFloor, 64, 5500, 15000, 0);
 }
