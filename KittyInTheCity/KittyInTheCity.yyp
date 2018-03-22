@@ -402,17 +402,6 @@
             "Key": "56cc3b1b-2ebe-4bab-b519-e0af0d58b652",
             "Value": {
                 "id": "0ae065de-7dd0-4c29-a0fb-ea707ca1c54f",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
                 "resourcePath": "sprites\/sprLvl4UndergroundBackround\/sprLvl4UndergroundBackround.yy",
                 "resourceType": "GMSprite"
             }

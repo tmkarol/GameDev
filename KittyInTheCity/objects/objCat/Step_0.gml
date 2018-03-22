@@ -50,8 +50,24 @@ else {
 	}
 }
 
-// Sprite changes 
-if (ducking) sprite_index = sprCatDuck;
+// Sprite changes
+if (attacking) {
+	sprite_index = sprCatScratch;
+	n--;
+	if (n == 0) {
+		attacking = false;
+		n = spriteduration;
+	}
+}
+else if (hissing) {
+	sprite_index = sprCatHiss;
+	n--;
+	if (n == 0) {
+		hissing = false;
+		n = spriteduration;
+	}
+}
+else if (ducking) sprite_index = sprCatDuck;
 else if (jumping) sprite_index = sprCatJump;
 else {
 	if (xVelocity == 0) {
