@@ -16,6 +16,8 @@ doubleClick = 0;
 jumping = false;
 jumpVelocity = -40;
 
+ducking = false;
+
 minBase = y;
 base = y;
 
