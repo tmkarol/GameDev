@@ -49,12 +49,6 @@ else {
 		base = minBase;
 	}
 }
-/*
-// drop from floor
-if (!place_meeting(x, y + 1, objFloorParent)) {
-		jumping = true;
-		base = lastBase;
-}*/
 
 // Sprite changes 
 if (ducking) sprite_index = sprCatDuck;
@@ -77,5 +71,36 @@ else {
 if (x < xprevious) image_xscale = -1;
 if (x > xprevious) image_xscale = 1;
 
+// stamina bar
+if (walking && !running) {
+	if (stamina < maxStamina) {
+		stamina++;
+	}
+}
+else if (!walking && running) {
+	if (stamina >= 3) {
+		stamina -= 3;
+	}
+	else {
+		stamina = 0;
+	}
+}
+else if (!walking && !running) {
+	if (stamina <= maxStamina - 5) {
+		stamina += 5;
+	}
+	else {
+		stamina = maxStamina;
+	}
+}
 
-
+if (stamina == 0) {
+	running = false;
+	walking = true;
+	if (image_xscale == 1) {
+		xVelocity = walkVelocity;
+	}
+	else {
+		xVelocity = -walkVelocity;
+	}
+}
