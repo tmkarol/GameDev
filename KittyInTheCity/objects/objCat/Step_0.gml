@@ -135,6 +135,9 @@ if (!stunned && !attacking && !hissing) {
 		if (alarm[1] < 0) {
 			alarm[1] = 30;
 		}
+		else {
+			alarm[1] = 30;
+		}
 	}
 }
 
@@ -165,6 +168,9 @@ if (attacking) {
 	if (alarm[2] < 0) {
 		alarm[2] = 10;
 	}
+	else {
+		alarm[2] = 10;
+	}
 		
 }
 if (hissing) {
@@ -179,6 +185,9 @@ if (hissing) {
 	}
 	instanceIDEnemy = noone;
 	if (alarm[2] < 0) {
+		alarm[2] = 10;
+	}
+	else {
 		alarm[2] = 10;
 	}
 }
