@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "objLvl4TopFloor",
     "eventList": [
-        
+        {
+            "id": "e131e613-d8f5-4f03-8495-e209dc02eddd",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "70209870-e1e0-4ee2-8cdc-ae4ceb26e546",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "4b24a058-5749-4093-a410-a089e272fdf5"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
