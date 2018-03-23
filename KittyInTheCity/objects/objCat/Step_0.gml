@@ -14,7 +14,7 @@ if (jumping) {
 	}
 }
 
-// collision with platform
+// collisions with platforms
 if (!onPlatform) {
 	instanceID = instance_place(x, y + yVelocity, objPlatformParent);
 	if (instanceID != noone) {
@@ -50,25 +50,11 @@ else {
 	}
 }
 
-// Sprite changes
-if (attacking) {
-	sprite_index = sprCatScratch;
-	n--;
-	if (n == 0) {
-		attacking = false;
-		n = spriteduration;
-	}
-}
-else if (hissing) {
-	sprite_index = sprCatHiss;
-	n--;
-	if (n == 0) {
-		hissing = false;
-		n = spriteduration;
-	}
-}
-else if (ducking) sprite_index = sprCatDuck;
-else if (jumping) sprite_index = sprCatJump;
+// animations
+if (attacking) { sprite_index = sprCatScratch; }
+else if (hissing) { sprite_index = sprCatHiss; }
+else if (ducking) { sprite_index = sprCatDuck; }
+else if (jumping) { sprite_index = sprCatJump; }
 else {
 	if (xVelocity == 0) {
 			sprite_index = sprCatStandd;
@@ -87,7 +73,19 @@ else {
 if (x < xprevious) image_xscale = -1;
 if (x > xprevious) image_xscale = 1;
 
-// stamina bar
+// stamina bar functionality: deplete stamina
+if (stamina == 0) {
+	running = false;
+	walking = true;
+	if (image_xscale == 1) {
+		xVelocity = walkVelocity;
+	}
+	else {
+		xVelocity = -walkVelocity;
+	}
+}
+
+// stamina bar functionality: walking/running/standing
 if (walking && !running) {
 	if (stamina < maxStamina) {
 		stamina++;
@@ -110,18 +108,77 @@ else if (!walking && !running) {
 	}
 }
 
+// stamina bar scale
+staminaBarXScale = stamina/maxStamina;
+
 // stamina collectibles
-if (place_meeting(x, y, objStaminaParent)) {
-	
+instanceIDStaminaCollectible = instance_place(x, y, objStaminaParent);
+if (instanceIDStaminaCollectible != noone) {
+	instance_destroy(instanceIDStaminaCollectible);
+	stamina += 20;
 }
 
-if (stamina == 0) {
-	running = false;
-	walking = true;
-	if (image_xscale == 1) {
-		xVelocity = walkVelocity;
+// health bar functionality: deplete hearts
+if (hearts == 0) {
+	room_restart();
+}
+
+// health bar functionality: collisions with enemies
+instanceIDEnemyCollision = instance_place(x, y, objEnemyParent);
+if (!stunned && !attacking && !hissing) {
+	if (instanceIDEnemyCollision != noone) {
+		instanceIDEnemyCollision = noone;
+		hearts--;
+		stunned = true;
+		image_alpha = 0.5;
+		// TODO add knock back animation
+		if (alarm[1] < 0) {
+			alarm[1] = 30;
+		}
 	}
-	else {
-		xVelocity = -walkVelocity;
+}
+
+// health bar functionality: collision with sewer water
+instanceIDWater = instance_place(x, y, objWater);
+if (instanceIDWater != noone) {
+	hearts = 0;
+	instanceIDWater = noone;
+}
+
+// health collectible
+instanceIDHealthCollectible = instance_place(x, y, objHeart);
+if (instanceIDHealthCollectible != noone) {
+	instance_destroy(instanceIDHealthCollectible);
+	if (hearts < 9) {
+		hearts++;
+	}
+}
+
+// attacks
+if (attacking) {
+	instanceIDEnemy = instance_place(x + 2, y, objEnemyParent);
+	if (instanceIDEnemy != noone) {
+		instance_destroy(instanceIDEnemy);
+		// TODO possibly add hitpoints to enemy
+	}
+	instanceIDEnemy = noone;
+	if (alarm[2] < 0) {
+		alarm[2] = 10;
+	}
+		
+}
+if (hissing) {
+	rightOrLeft = x + 20;  // facing right
+	if (image_xscale != 1) {
+		rightOrLeft = x - 20;  // facing left
+	}
+	instanceIDEnemy = instance_place(rightOrLeft, y, objEnemyParent);
+	if (instanceIDEnemy != noone) {
+		objEnemyParent.image_alpha = 0.5;
+		// TODO stop enemy moving
+	}
+	instanceIDEnemy = noone;
+	if (alarm[2] < 0) {
+		alarm[2] = 10;
 	}
 }

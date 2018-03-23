@@ -1,8 +1,4 @@
-if (global.pause) { exit; } // If game is paused, pause
-
-/// @description Insert description here
-// You can write your code in this editor
-x += xvelocity
-if ((objCat.x) < x + sprite_width){
-	// cat got caught
-}
+if (global.pause) { exit; }
+x += xVelocity
+// TODO add functionality to restart level if cat is caught
+// TODO add functionality to stop running if cat is not in front

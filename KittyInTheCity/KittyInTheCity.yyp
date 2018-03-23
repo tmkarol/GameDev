@@ -72,7 +72,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/sprHealthBar\/sprHealthBar.yy",
+                "resourcePath": "sprites\/sprStaminaBar\/sprStaminaBar.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -780,25 +780,6 @@
             }
         },
         {
-            "Key": "4a0f006f-c23c-492d-ab0c-63c1040ef3e2",
-            "Value": {
-                "id": "8c5e060b-ac2e-49cc-a992-d8c4af2b7f29",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "sprites\/sprite56\/sprite56.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "4b24a058-5749-4093-a410-a089e272fdf5",
             "Value": {
                 "id": "3cf45019-6e5d-4ab3-be59-bad4f2cf20f3",
@@ -833,6 +814,25 @@
                     "default"
                 ],
                 "resourcePath": "objects\/objSandwich\/objSandwich.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5021ab22-5cd7-4719-a3b4-e6c1ce2c0552",
+            "Value": {
+                "id": "87d08f40-c1af-4e17-b9d2-4a4f2c20e67e",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/objEnemyParent\/objEnemyParent.yy",
                 "resourceType": "GMObject"
             }
         },

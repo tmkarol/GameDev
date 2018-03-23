@@ -1,2 +1,2 @@
 // enemy boss
-xvelocity = 10
+xVelocity = 10;

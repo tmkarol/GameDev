@@ -1,3 +1,3 @@
 // enemy
-alarm[0] = 40
-xvelocity = 5
+xVelocity = 5;
+alarm[0] = 40;

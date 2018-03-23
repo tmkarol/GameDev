@@ -1,3 +1,3 @@
 // projectile thrown by squirrels
-yvelocity = -5;
-xvelocity = -5;
+yVelocity = -5;
+xVelocity = -5;

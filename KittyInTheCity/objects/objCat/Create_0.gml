@@ -31,7 +31,9 @@ hearts = 9;
 maxStamina = 100;
 stamina = maxStamina;
 
+staminaBarXScale = 1;
+
+stunned = false;
+
 attacking = false;
 hissing = false;
-spriteduration = 5;
-n = spriteduration;

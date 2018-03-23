@@ -1,4 +1,3 @@
-// enemy
-startingpos = y
-yvelocity = 0
-alarm[0] = 50
+startPosition = y;
+yVelocity = 0;
+alarm[0] = 50;
