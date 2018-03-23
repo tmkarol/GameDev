@@ -1,23 +1,14 @@
 {
-    "id": "5fae2b32-5b3a-4761-b4ff-1c0884279227",
+    "id": "508d0a21-61d8-45a7-98ba-b099b9f5c1ba",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "objCatFood",
+    "name": "objStaminaParent",
     "eventList": [
-        {
-            "id": "6d7af212-961e-416c-b344-16b7da1aa953",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "5fae2b32-5b3a-4761-b4ff-1c0884279227"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "508d0a21-61d8-45a7-98ba-b099b9f5c1ba",
+    "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -33,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "5788b85f-4586-4e86-8222-9e45754a0bea",
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
 }

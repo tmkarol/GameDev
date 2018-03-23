@@ -110,6 +110,11 @@ else if (!walking && !running) {
 	}
 }
 
+// stamina collectibles
+if (place_meeting(x, y, objStaminaParent)) {
+	
+}
+
 if (stamina == 0) {
 	running = false;
 	walking = true;
