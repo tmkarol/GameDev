@@ -165,11 +165,8 @@ if (attacking) {
 		// TODO possibly add hitpoints to enemy
 	}
 	instanceIDEnemy = noone;
-	if (alarm[2] < 0) {
-		alarm[2] = 10;
-	}
-	else {
-		alarm[2] = 10;
+	if(alarm[2] < 0){
+	alarm[2] = 10;
 	}
 		
 }
@@ -184,10 +181,7 @@ if (hissing) {
 		// TODO stop enemy moving
 	}
 	instanceIDEnemy = noone;
-	if (alarm[2] < 0) {
-		alarm[2] = 10;
-	}
-	else {
-		alarm[2] = 10;
+	if(alarm[2] < 0){
+	alarm[2] = 10;
 	}
 }
