@@ -8,6 +8,11 @@ menuX = x;
 menuY = y;
 buttonH = 50;
 
+// Set control positions
+controlX = menuX;
+controlY = menuY + 285;
+controlH = 30;
+
 // Buttons
 button[0] = "New Game";
 button[1] = "Load Game";
@@ -18,3 +23,13 @@ numButtons = array_length_1d(button);
 
 menuIndex = 0; // index of memu item we are currently on
 lastSelected = 0; // Index of previously selected item
+
+// Control instructions
+control[0] = "a - move left";
+control[1] = "d - move right";
+control[2] = "w - jump";
+control[3] = "s - duck";
+control[4] = "? - hiss";
+control[5] = "? - scratch";
+control[6] = "esc - pause";
+numControls = array_length_1d(control);

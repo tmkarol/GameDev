@@ -1,5 +1,6 @@
 /// @description Draw the menu options
 
+// Draw the menu options
 var i = 0;
 repeat(numButtons) {
 	
@@ -12,5 +13,15 @@ repeat(numButtons) {
 	}
 	
 	draw_text(menuX, menuY + buttonH*i, button[i]);
+	i++;
+}
+
+// Draw the instructions
+i = 0;
+draw_set_font(fntInstructions);
+draw_set_color(c_dkgray);
+draw_set_halign(fa_center);
+repeat(numControls) {
+	draw_text(controlX, controlY + controlH*i, control[i]);
 	i++;
 }
