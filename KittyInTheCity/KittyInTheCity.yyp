@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "1c8ea9ce-6db5-4e6f-b8f5-d22a50961014",
+            "Value": {
+                "id": "f54c00a4-64c8-419d-96f3-384140ffa2a0",
+                "resourcePath": "sprites\\sprCatFlinch\\sprCatFlinch.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1cda3878-305c-4b03-b1f2-cd660feee57c",
             "Value": {
                 "id": "3b9bcc99-bb37-4828-819b-4ba597237ceb",
