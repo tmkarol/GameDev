@@ -130,6 +130,10 @@ if (!stunned && !attacking && !hissing) {
 		instanceIDEnemyCollision = noone;
 		hearts--;
 		stunned = true;
+		// Play sound effect
+		if (global.music = true) {
+			audio_play_sound(sndHurt, 10, false);	
+		}
 		image_alpha = 0.5;
 		// TODO add knock back animation
 		if (alarm[1] < 0) {
@@ -144,6 +148,9 @@ if (!stunned && !attacking && !hissing) {
 // health bar functionality: collision with sewer water
 instanceIDWater = instance_place(x, y, objWater);
 if (instanceIDWater != noone) {
+	if (global.music = true) {
+		audio_play_sound(sndDie, 10, false);	
+	}
 	hearts = 0;
 	instanceIDWater = noone;
 }

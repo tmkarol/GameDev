@@ -29,7 +29,10 @@ control[0] = "a - move left";
 control[1] = "d - move right";
 control[2] = "w - jump";
 control[3] = "s - duck";
-control[4] = "? - hiss";
-control[5] = "? - scratch";
+control[4] = "shift - hiss";
+control[5] = "space - scratch";
 control[6] = "esc - pause";
 numControls = array_length_1d(control);
+
+// Play music
+//audio_play_sound(sndMenuMusic, 10, true);

@@ -23,7 +23,16 @@ switch(menuIndex) {
 		room_goto(rmLevelSelect);
 		break;
 	case 3:
-		// TODO: Add code to turn sound on or off
+		// Turn sound on
+		if (global.music = false) {
+			global.music = true;
+			audio_play_sound(sndMenuMusic, 10, true);
+		}
+		// Turn sound off
+		else if (global.music = true) {
+			global.music = false;
+			audio_pause_sound(sndMenuMusic);
+		}
 		break;
 	case 4:
 		game_end();
