@@ -1,4 +1,8 @@
-if (global.pause) { exit; }
+if (global.pause) { 
+	image_speed = 0;
+	exit; 
+}
+image_speed = theSpeed;
 y += yVelocity;
 yVelocity += 1;
 if (y > startPosition) yVelocity = 0;

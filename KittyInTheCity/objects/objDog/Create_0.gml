@@ -1,2 +1,3 @@
+theSpeed = .5;
 xVelocity = 10;
-image_speed = .5;
+image_speed = theSpeed;
