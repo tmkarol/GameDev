@@ -17,7 +17,7 @@ controlH = 30;
 button[0] = "New Game";
 button[1] = "Load Game";
 button[2] = "Level Select";
-button[3] = "Music";
+button[3] = "Sound";
 button[4] = "Exit";
 numButtons = array_length_1d(button);
 

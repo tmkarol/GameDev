@@ -120,6 +120,7 @@ if (instanceIDStaminaCollectible != noone) {
 
 // health bar functionality: deplete hearts
 if (hearts == 0) {
+	hearts = 9; // Reload lives
 	room_restart();
 }
 

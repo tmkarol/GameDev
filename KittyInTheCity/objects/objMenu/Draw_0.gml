@@ -16,11 +16,14 @@ repeat(numButtons) {
 	i++;
 }
 
-// Draw the instructions
-i = 0;
+// Draw menu controls
 draw_set_font(fntInstructions);
 draw_set_color(c_dkgray);
 draw_set_halign(fa_center);
+draw_text(room_width/2, 30, "Use the arrow keys and enter to select");
+
+// Draw the instructions
+i = 0;
 repeat(numControls) {
 	draw_text(controlX, controlY + controlH*i, control[i]);
 	i++;
