@@ -115,7 +115,12 @@ staminaBarXScale = stamina/maxStamina;
 instanceIDStaminaCollectible = instance_place(x, y, objStaminaParent);
 if (instanceIDStaminaCollectible != noone) {
 	instance_destroy(instanceIDStaminaCollectible);
-	stamina += 20;
+	if (stamina <= maxStamina - 20) {
+		stamina += 20;
+	}
+	else {
+		stamina = maxStamina;
+	}
 }
 
 // health bar functionality: deplete hearts
