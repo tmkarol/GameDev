@@ -131,9 +131,11 @@ if (hearts == 0) {
 
 // health bar functionality: collisions with enemies
 instanceIDEnemyCollision = instance_place(x, y, objEnemyParent);
+instanceIDWaterCollision = instance_place(x, y, objCityWater);
 if (!stunned && !attacking && !hissing) {
-	if (instanceIDEnemyCollision != noone) {
+	if (instanceIDEnemyCollision != noone || instanceIDWaterCollision != noone) {
 		instanceIDEnemyCollision = noone;
+		instanceIDWaterCollision = noone;
 		hearts--;
 		stunned = true;
 		// Play sound effect
@@ -191,6 +193,7 @@ if (hissing) {
 	instanceIDEnemy = instance_place(rightOrLeft, y, objEnemyParent);
 	if (instanceIDEnemy != noone) {
 		objEnemyParent.image_alpha = 0.5;
+
 		// TODO stop enemy moving
 	}
 	instanceIDEnemy = noone;
