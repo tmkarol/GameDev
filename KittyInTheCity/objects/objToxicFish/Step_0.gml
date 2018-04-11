@@ -5,10 +5,15 @@ if (global.pause) {
 	alarm[0] = alarmtime;
 	exit; 
 }
+
 image_speed = theSpeed;
-if (image_alpha == 1) {
+if (image_alpha != 1) {
+	image_speed = 0;
+}
+else {
 	y += yVelocity;
 }
+
 yVelocity += 1;
 if (y > startPosition) yVelocity = 0;
 if (y < yprevious) image_yscale = 1;
