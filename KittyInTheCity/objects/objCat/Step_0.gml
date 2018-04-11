@@ -87,8 +87,8 @@ if (stamina == 0) {
 
 // stamina bar functionality: walking/running/standing
 if (walking && !running) {
-	if (stamina < maxStamina) {
-		stamina++;
+	if (stamina <= maxStamina - 0.25) {
+		stamina += 0.25;
 	}
 }
 else if (!walking && running) {
@@ -100,8 +100,8 @@ else if (!walking && running) {
 	}
 }
 else if (!walking && !running) {
-	if (stamina <= maxStamina - 5) {
-		stamina += 5;
+	if (stamina <= maxStamina - 0.5) {
+		stamina += 0.5;
 	}
 	else {
 		stamina = maxStamina;
@@ -172,32 +172,45 @@ if (instanceIDHealthCollectible != noone) {
 	}
 }
 
-// attacks
-if (attacking) {
-	instanceIDEnemy = instance_place(x + 2, y, objEnemyParent);
-	if (instanceIDEnemy != noone) {
-		instance_destroy(instanceIDEnemy);
-		// TODO possibly add hitpoints to enemy
+// scratching
+if (stamina >= 25) {
+	if (attacking) {
+		// reduce stamina
+		stamina -= 25;
+	
+		// detect enemy
+		instanceIDEnemy = instance_place(x + 2, y, objEnemyParent);
+		if (instanceIDEnemy != noone) {
+			instance_destroy(instanceIDEnemy);
+			// TODO possibly add hitpoints to enemy
+		}
+		instanceIDEnemy = noone;
+		if(alarm[2] < 0){
+		alarm[2] = 10;
+		}	
 	}
-	instanceIDEnemy = noone;
-	if(alarm[2] < 0){
-	alarm[2] = 10;
-	}
-		
 }
-if (hissing) {
-	rightOrLeft = x + 20;  // facing right
-	if (image_xscale != 1) {
-		rightOrLeft = x - 20;  // facing left
-	}
-	instanceIDEnemy = instance_place(rightOrLeft, y, objEnemyParent);
-	if (instanceIDEnemy != noone) {
-		objEnemyParent.image_alpha = 0.5;
 
-		// TODO stop enemy moving
-	}
-	instanceIDEnemy = noone;
-	if(alarm[2] < 0){
-	alarm[2] = 10;
+// hissing
+if (stamina >= 40) {
+	if (hissing) {
+		// reduce stamina
+		stamina -= 40;
+	
+		// detect enemy
+		rightOrLeft = x + 20;  // facing right
+		if (image_xscale != 1) {
+			rightOrLeft = x - 20;  // facing left
+		}
+		instanceIDEnemy = instance_place(rightOrLeft, y, objEnemyParent);
+		if (instanceIDEnemy != noone) {
+			objEnemyParent.image_alpha = 0.5;
+
+			// TODO stop enemy moving
+		}
+		instanceIDEnemy = noone;
+		if(alarm[2] < 0){
+		alarm[2] = 10;
+		}
 	}
 }

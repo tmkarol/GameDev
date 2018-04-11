@@ -27,7 +27,6 @@ base = y;
 
 onPlatform = false;
 
-//hearts = 9;
 maxStamina = 100;
 stamina = maxStamina;
 
