@@ -19,3 +19,4 @@ numButtons = array_length_1d(button);
 
 menuIndex = 0; // index of memu item we are currently on
 lastSelected = 0; // Index of previously selected item
+

@@ -34,5 +34,6 @@ control[5] = "space - scratch";
 control[6] = "esc - pause";
 numControls = array_length_1d(control);
 
+
 // Play music
 //audio_play_sound(sndMenuMusic, 10, true);
