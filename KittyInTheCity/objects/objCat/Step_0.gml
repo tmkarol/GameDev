@@ -123,8 +123,21 @@ if (instanceIDStaminaCollectible != noone) {
 	}
 }
 
-// health bar functionality: deplete hearts
-if (hearts == 0) {
+// health bar functionality: depleted hearts and checkpoint
+if (instance_exists(objCheckpoint)) {
+	checkPointXPos = objCheckpoint.x;
+	checkPointYPos = objCheckpoint.y
+	if (hearts == 0 && x >= checkPointXPos) {
+		x = checkPointXPos;
+		y = checkPointYPos;
+		hearts = 9;
+	}
+	else if (hearts == 00 && x < checkPointXPos) {
+		hearts = 9;
+		room_restart();
+	}
+}
+else if (hearts == 0) {
 	hearts = 9; // Reload lives
 	room_restart();
 }
