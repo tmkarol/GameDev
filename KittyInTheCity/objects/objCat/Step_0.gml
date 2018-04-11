@@ -133,7 +133,7 @@ if (hearts == 0) {
 instanceIDEnemyCollision = instance_place(x, y, objEnemyParent);
 instanceIDWaterCollision = instance_place(x, y, objCityWater);
 if (!stunned && !attacking && !hissing) {
-	if (instanceIDEnemyCollision != noone || instanceIDWaterCollision != noone) {
+	if ((instanceIDEnemyCollision != noone && instanceIDEnemyCollision.image_alpha == 1) || instanceIDWaterCollision != noone) {
 		instanceIDEnemyCollision = noone;
 		instanceIDWaterCollision = noone;
 		hearts--;
@@ -198,15 +198,13 @@ if (stamina >= 40) {
 		stamina -= 40;
 	
 		// detect enemy
-		rightOrLeft = x + 20;  // facing right
+		rightOrLeft = x + 10;  // facing right
 		if (image_xscale != 1) {
-			rightOrLeft = x - 20;  // facing left
+			rightOrLeft = x - 10;  // facing left
 		}
 		instanceIDEnemy = instance_place(rightOrLeft, y, objEnemyParent);
 		if (instanceIDEnemy != noone) {
-			objEnemyParent.image_alpha = 0.5;
-
-			// TODO stop enemy moving
+			instanceIDEnemy.image_alpha = 0.5;
 		}
 		instanceIDEnemy = noone;
 		if(alarm[2] < 0){
