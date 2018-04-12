@@ -3,7 +3,6 @@ if (file_exists("save.sav")) {
 			var loadFile = file_text_open_read("save.sav");
 			var loadedRoom = file_text_read_real(loadFile);
 			file_text_close(loadFile);
-			show_message(loadedRoom);
 			switch(loadedRoom){
 				case 4:
 					levelProgress = 1;
@@ -24,6 +23,6 @@ if (file_exists("save.sav")) {
 					levelProgress = 0;
 			}
 			
-		}
+}
 
 

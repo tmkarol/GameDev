@@ -4,6 +4,10 @@ switch(menuIndex) {
 	case 0:
 		// Start a new game
 		global.load = false;
+		if(file_exists("save.sav")){
+			file_delete("save.sav");
+		}
+		objLevelProgress.levelProgress = 0;
 		global.new = true;
 		room_goto(rmCutscene0);
 		break;
