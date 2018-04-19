@@ -145,6 +145,7 @@ if (instance_exists(objCheckpoint)) {
 }
 else if (hearts == 0) {
 	hearts = 9; // Reload lives
+	stamina = maxStamina; // Reload stamina
 	room_restart();
 }
 
@@ -239,12 +240,14 @@ if (stamina >= 40) {
 // Cat dies if it goes off the left side of the screen
 if (x < camera_get_view_x(view_camera[0])) {
 	hearts = 9;
+	stamina = maxStamina;
 	room_restart();
 }
 
 // Cat dies if it goes behind the bottom of the screen
 if (y > camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) + 80) {
 	hearts = 9;
+	stamina = maxStamina;
 	room_restart();
 }
 
