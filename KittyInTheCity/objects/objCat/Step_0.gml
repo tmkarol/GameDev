@@ -247,3 +247,13 @@ if (y > camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0
 	hearts = 9;
 	room_restart();
 }
+
+// Stop cat from walking off right side of screen
+if (x > camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 32) {
+	x = x - 10;
+}
+
+// Stop cat from going off the top of the screen
+if (y < camera_get_view_y(view_camera[0])) {
+	y = y + 10;
+}
