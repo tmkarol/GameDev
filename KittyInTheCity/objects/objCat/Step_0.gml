@@ -116,6 +116,9 @@ staminaBarXScale = stamina/maxStamina;
 // stamina collectibles
 instanceIDStaminaCollectible = instance_place(x, y, objStaminaParent);
 if (instanceIDStaminaCollectible != noone) {
+	if (global.music = true) {
+			audio_play_sound(Pick_Up_Pizza, 10, false);	
+		}
 	instance_destroy(instanceIDStaminaCollectible);
 	if (stamina <= maxStamina - 20) {
 		stamina += 20;
@@ -182,6 +185,9 @@ if (instanceIDWater != noone) {
 // health collectible
 instanceIDHealthCollectible = instance_place(x, y, objHeart);
 if (instanceIDHealthCollectible != noone) {
+	if (global.music = true) {
+			audio_play_sound(Pick_Up_Pizza, 10, false);	
+		}
 	instance_destroy(instanceIDHealthCollectible);
 	if (hearts < 9) {
 		hearts++;
