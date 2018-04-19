@@ -1293,6 +1293,25 @@
             }
         },
         {
+            "Key": "593cc848-8c96-4093-87ec-841b3955ceee",
+            "Value": {
+                "id": "ea1087e1-874f-4ba8-95e8-4624a78232e8",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/DarkCloudsCoveringTheHorizon\/DarkCloudsCoveringTheHorizon.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "5b456862-6ef9-4a20-89c6-968ae21d43be",
             "Value": {
                 "id": "af1471fd-1719-45b7-a0d4-38dbc12a9a9a",
@@ -1711,6 +1730,25 @@
             }
         },
         {
+            "Key": "757f56a4-5bbc-47e0-92b0-1eab18b3a017",
+            "Value": {
+                "id": "f58bb2c4-a1c4-42e7-9710-eae9a6bc725b",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/CallOfTheAncients\/CallOfTheAncients.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "75d5dce1-c0ee-4027-83fc-f13bf363267c",
             "Value": {
                 "id": "17d8cbad-4f69-4609-bf55-962990ee86c8",
@@ -2012,6 +2050,25 @@
                 ],
                 "resourcePath": "sprites\/sprHeart\/sprHeart.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8a9f612a-1405-4601-89a8-5d10f7fbdf9a",
+            "Value": {
+                "id": "92d43d6c-0bda-49a6-81d7-4633c693c2bb",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/Privateering\/Privateering.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -2715,6 +2772,25 @@
                 ],
                 "resourcePath": "sprites\/sprAnimalControlRun\/sprAnimalControlRun.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b8dc9763-d640-45fb-9786-ac2f213b0eaa",
+            "Value": {
+                "id": "24f1c07e-ddf8-4a0a-9446-894b14240b48",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/WindowToThePast\/WindowToThePast.yy",
+                "resourceType": "GMSound"
             }
         },
         {
