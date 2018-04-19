@@ -1,4 +1,6 @@
-if (global.pause) { exit; }
+if (global.pause) { 
+	alarm[1]++;
+	exit; }
 
 // update x position
 x = x + xVelocity;
