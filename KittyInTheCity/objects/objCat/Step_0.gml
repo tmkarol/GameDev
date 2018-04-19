@@ -128,6 +128,7 @@ if (instance_exists(objCheckpoint)) {
 	checkPointXPos = objCheckpoint.x;
 	checkPointYPos = objCheckpoint.y
 	if (hearts == 0 && x >= checkPointXPos) {
+		objEnemyParent.image_alpha = 1;
 		x = checkPointXPos;
 		y = checkPointYPos;
 		hearts = 9;
@@ -194,7 +195,8 @@ if (stamina >= 25) {
 		// detect enemy
 		instanceIDEnemy = instance_place(x + 2, y, objEnemyParent);
 		if (instanceIDEnemy != noone) {
-			instance_destroy(instanceIDEnemy);
+			//instance_destroy(instanceIDEnemy);
+			instanceIDEnemy.image_alpha = 0;
 			// TODO possibly add hitpoints to enemy
 		}
 		instanceIDEnemy = noone;
