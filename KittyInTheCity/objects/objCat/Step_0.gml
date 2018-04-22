@@ -252,9 +252,22 @@ if (x < camera_get_view_x(view_camera[0])) {
 
 // Cat dies if it goes behind the bottom of the screen
 if (y > camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) + 80) {
-	hearts = 9;
-	stamina = maxStamina;
-	room_restart();
+	checkPointXPos = objCheckpoint.x;
+	checkPointYPos = objCheckpoint.y;
+	if (x >= checkPointXPos) {
+		objAnimalControl.path_position = .75;
+		objAnimalControl.alarm[2] = room_speed * 6;
+		objAnimalControl.sprite_index = sprAnimalControlRun;
+		x = checkPointXPos;
+		y = checkPointYPos;
+		stamina = maxStamina;
+		hearts = 9;
+	}
+	else {
+		hearts = 9;
+		stamina = maxStamina;
+		room_restart();
+	}
 }
 
 // Stop cat from walking off right side of screen
