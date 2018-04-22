@@ -138,7 +138,7 @@ if (instance_exists(objCheckpoint)) {
 		y = checkPointYPos;
 		hearts = 9;
 	}
-	else if (hearts == 00 && x < checkPointXPos) {
+	else if (hearts == 0 && x < checkPointXPos) {
 		hearts = 9;
 		room_restart();
 	}
@@ -238,7 +238,7 @@ if (stamina >= 40) {
 }
 
 // Cat dies if it goes off the left side of the screen
-if (x < camera_get_view_x(view_camera[0])) {
+if (!instance_exists(objCheckpoint) && x < camera_get_view_x(view_camera[0])) {
 	hearts = 9;
 	stamina = maxStamina;
 	room_restart();
