@@ -131,7 +131,7 @@ if (instanceIDStaminaCollectible != noone) {
 // health bar functionality: depleted hearts and checkpoint
 if (instance_exists(objCheckpoint)) {
 	checkPointXPos = objCheckpoint.x;
-	checkPointYPos = objCheckpoint.y
+	checkPointYPos = objCheckpoint.y;
 	if (hearts == 0 && x >= checkPointXPos) {
 		objEnemyParent.image_alpha = 1;
 		x = checkPointXPos;
@@ -238,10 +238,16 @@ if (stamina >= 40) {
 }
 
 // Cat dies if it goes off the left side of the screen
-if (!instance_exists(objCheckpoint) && x < camera_get_view_x(view_camera[0])) {
+if (x < camera_get_view_x(view_camera[0])) {
 	hearts = 9;
 	stamina = maxStamina;
-	room_restart();
+	if(instance_exists(objCheckpoint) && x >= objCheckpoint.x){
+		x = objCheckpoint.x;
+		y = objCheckpoint.y;
+	}
+	else{
+		room_restart();
+	}
 }
 
 // Cat dies if it goes behind the bottom of the screen
