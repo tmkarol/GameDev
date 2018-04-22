@@ -254,7 +254,13 @@ if (x < camera_get_view_x(view_camera[0])) {
 if (y > camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) + 80) {
 	hearts = 9;
 	stamina = maxStamina;
-	room_restart();
+	if(instance_exists(objCheckpoint) && x >= objCheckpoint.x && y <= objCheckpoint.y){
+		x = objCheckpoint.x;
+		y = objCheckpoint.y;
+	}
+	else{
+		room_restart();
+	}
 }
 
 // Stop cat from walking off right side of screen
