@@ -227,7 +227,7 @@ if (stamina >= 40) {
 			rightOrLeft = x - 10;  // facing left
 		}
 		instanceIDEnemy = instance_place(rightOrLeft, y, objEnemyParent);
-		if (instanceIDEnemy != noone) {
+		if (instanceIDEnemy != noone && instanceIDEnemy.image_alpha > 0) {
 			instanceIDEnemy.image_alpha = 0.5;
 		}
 		instanceIDEnemy = noone;
