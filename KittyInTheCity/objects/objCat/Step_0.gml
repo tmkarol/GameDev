@@ -137,9 +137,11 @@ if (instance_exists(objCheckpoint)) {
 		x = checkPointXPos;
 		y = checkPointYPos;
 		hearts = 9;
+		stamina = maxStamina;
 	}
 	else if (hearts == 0 && x < checkPointXPos) {
 		hearts = 9;
+		stamina = maxStamina;
 		room_restart();
 	}
 }
@@ -163,7 +165,6 @@ if (!stunned && !attacking && !hissing) {
 			audio_play_sound(sndHurt, 10, false);	
 		}
 		image_alpha = 0.5;
-		// TODO add knock back animation
 		if (alarm[1] < 0) {
 			alarm[1] = 30;
 		}
@@ -204,9 +205,7 @@ if (stamina >= 25) {
 		// detect enemy
 		instanceIDEnemy = instance_place(x + 2, y, objEnemyParent);
 		if (instanceIDEnemy != noone) {
-			//instance_destroy(instanceIDEnemy);
 			instanceIDEnemy.image_alpha = 0;
-			// TODO possibly add hitpoints to enemy
 		}
 		instanceIDEnemy = noone;
 		if(alarm[2] < 0){
@@ -237,29 +236,16 @@ if (stamina >= 40) {
 	}
 }
 
-// Cat dies if it goes off the left side of the screen
-if (x < camera_get_view_x(view_camera[0])) {
-	hearts = 9;
-	stamina = maxStamina;
-	if(instance_exists(objCheckpoint) && x >= objCheckpoint.x){
-		x = objCheckpoint.x;
-		y = objCheckpoint.y;
-	}
-	else{
-		room_restart();
-	}
-}
-
-// Cat dies if it goes behind the bottom of the screen
-if (y > camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) + 80) {
-	hearts = 9;
-	stamina = maxStamina;
-	if(instance_exists(objCheckpoint) && x >= objCheckpoint.x && y <= objCheckpoint.y){
-		x = objCheckpoint.x;
-		y = objCheckpoint.y;
-	}
-	else{
-		room_restart();
+// cat dies if at any point it touches or falls behind animal control object
+if (instance_exists(objAnimalControl)) {
+	instanceIDACCollision = instance_place(x, y, objAnimalControl);
+	if (instanceIDACCollision != noone ||
+		x < (objAnimalControl.x - 200) ||  // allows space to the left for climb
+		y > objAnimalControl.y) {
+		if (x >= objCheckpoint.x) {
+			objAnimalControl.path_position = 0.75;
+		}
+		hearts = 0;
 	}
 }
 

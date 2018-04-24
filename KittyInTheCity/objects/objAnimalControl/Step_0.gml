@@ -6,7 +6,7 @@ if (global.pause) {
 else {
 	if (move){
 		image_speed = theSpeed;
-		path_speed = 10;
+		path_speed = 10.5;
 	}
 }
 if (direction > 20 && direction < 160){
