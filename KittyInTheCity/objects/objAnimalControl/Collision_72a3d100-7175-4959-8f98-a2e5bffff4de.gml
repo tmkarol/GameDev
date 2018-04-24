@@ -1,4 +1,5 @@
 /// @description Restart level if cat dies
-
-objCat.hearts = 9;
-room_restart();
+if (instance_exists(objCheckpoint) && path_position > 0.75) {
+	path_position = 0.75;
+}
+objCat.hearts = 0;

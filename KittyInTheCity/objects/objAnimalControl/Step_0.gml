@@ -9,3 +9,9 @@ else {
 		path_speed = 10;
 	}
 }
+if (direction > 20 && direction < 160){
+	sprite_index = sprAnimalControlClimb;	
+}
+else {
+    sprite_index = sprAnimalControlRun;	
+}
